@@ -17,7 +17,7 @@ function renderPosts(posts) {
 
     // Post content
     card.innerHTML = `
-      <a href="https://t.co/I4BX9CV8Hl" target="_self">
+      <a href="https://t.co/XQdVH7QtTQ" target="_self">
         <div class="thumb">
           <img src="${post.image || 'https://i.ibb.co/placeholder.jpg'}" alt="${post.title}">
           <div class="badge">${post.category}</div>
