@@ -1,0 +1,42 @@
+<!-- ========================= movie.html ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <style>
+    body{margin:0;background:#000;color:#fff;font-family:Arial}
+    header{padding:14px;text-align:center;font-size:22px;color:#ff9000;border-bottom:2px solid #ff9000}
+    .player{position:relative;padding-top:56.25%;margin:16px;border:1px solid #222}
+    iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+    .ads{text-align:center;color:#777;margin:16px}
+    a{color:#ff9000;text-decoration:none}
+  </style>
+</head>
+<body>
+
+<header id="title">Loading...</header>
+<div class="ads">TOP AD</div>
+<div class="player"><iframe id="video" allowfullscreen></iframe></div>
+<div class="ads">BOTTOM AD</div>
+<div style="text-align:center;padding:18px"><a href="index.html">⬅ Back</a></div>
+
+<script>
+  const p=new URLSearchParams(location.search);
+  title.innerText=p.get('title')||'Movie';
+  video.src=p.get('video');
+</script>
+
+</body>
+</html>
