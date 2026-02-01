@@ -14,6 +14,8 @@ function renderPosts(posts) {
   posts.forEach(post => {
     const card = document.createElement("div");
     card.className = "card";
+
+    // Post content
     card.innerHTML = `
       <a href="#">
         <div class="thumb">
@@ -25,9 +27,17 @@ function renderPosts(posts) {
           <div class="meta">${post.date}</div>
         </div>
       </a>
-      <div class="ad-box">Native Banner Ad (Inside Post)</div>
+      <div class="ad-box" id="ad-${post.title.replace(/\s+/g, '-') }"></div>
     `;
+
     postsContainer.appendChild(card);
+
+    // Insert your native banner ad dynamically
+    const adContainer = card.querySelector(".ad-box");
+    adContainer.innerHTML = `
+      <script async="async" data-cfasync="false" src="https://pl28625077.effectivegatecpm.com/13c610a751fa1554ea56e5008eafae27/invoke.js"></script>
+      <div id="container-13c610a751fa1554ea56e5008eafae27"></div>
+    `;
   });
 }
 
